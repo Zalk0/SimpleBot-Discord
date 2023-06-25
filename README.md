@@ -14,7 +14,8 @@ pip install -r requirements.txt
 ---
 Before launching the bot, you have to create the **`token_discord`** file and put a Discord bot token inside.  
 To have one, go to the [Discord Developer Portal](https://discord.com/developers) and create a new application.  
-Then go to the Bot section and click the Reset Token button, you can now claim the token.
+Then go to the Bot section and click the Reset Token button, you can now claim the token.  
+You also have to enable all the Privileged Gateway Intents as they're enabled in the code.
 
 ---
 After having done all this you can launch the bot:

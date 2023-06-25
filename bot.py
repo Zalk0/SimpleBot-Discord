@@ -10,7 +10,6 @@ class SimpleBot(discord.Client):
         # Set intents for the bot
         intents = discord.Intents.all()
         super().__init__(intents=intents)
-        self.synced = False
 
     # Wait until bot is ready
     async def on_ready(self):
@@ -20,9 +19,7 @@ class SimpleBot(discord.Client):
         # Import commands and sync
         command_tree = discord.app_commands.CommandTree(self)
         commands_list(command_tree)
-        if not self.synced:
-            await command_tree.sync()
-            self.synced = True
+        await command_tree.sync()
 
         # Set activity of the bot
         activity = discord.Activity(type=discord.ActivityType.listening, name="me")
