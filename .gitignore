@@ -1,0 +1,4 @@
+# Ignore the token of the bot (private)
+bot_token
+# Ignore Python's cache
+__pycache__
