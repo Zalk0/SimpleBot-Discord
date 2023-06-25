@@ -1,4 +1,4 @@
-# Discord_SimpleBot
+#     SimpleBot-Discord
 
 A simple Discord bot to begin using [discord.py](https://github.com/Rapptz/discord.py).  
 Be sure to have Python 3.8 or higher installed, as it is required by discord.py.
@@ -6,8 +6,8 @@ Be sure to have Python 3.8 or higher installed, as it is required by discord.py.
 Clone the projet and install the requirements:
 
 ```
-git clone https://github.com/Zalk0/Discord_SimpleBot.git
-cd Discord_SimpleBot
+git clone https://github.com/Zalk0/SimpleBot-Discord.git
+cd SimpleBot-Discord
 pip install -r requirements.txt
 ```
 
