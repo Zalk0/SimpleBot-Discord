@@ -1,7 +1,7 @@
 #     SimpleBot-Discord
 
 A simple Discord bot to begin using [discord.py](https://github.com/Rapptz/discord.py).  
-Be sure to have Python 3.8 or higher installed, as it is required by discord.py.
+Be sure to have Python 3.8 or higher installed as it is required by discord.py.
 
 Clone the projet and install the requirements:
 
@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ---
 Before launching the bot, you have to create the **`token_discord`** file and put a Discord bot token inside.  
 To have one, go to the [Discord Developer Portal](https://discord.com/developers) and create a new application.  
-Then go to the Bot section and click the Reset Token button, you can now claim the token.  
+Go to the Bot section and click the Reset Token button, you can now claim the token.  
 You also have to enable all the Privileged Gateway Intents as they're enabled in the code.
 
 ---
