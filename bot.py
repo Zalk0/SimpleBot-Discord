@@ -28,8 +28,11 @@ class SimpleBot(discord.Client):
         activity = discord.Activity(type=discord.ActivityType.listening, name="me")
         await self.change_presence(activity=activity, status=discord.Status.online)
 
+        # Set up logging
+        discord.utils.setup_logging()
+
         # Check the number of servers the bot is a part of
-        print(f"Number of servers I'm in : {len(self.guilds)}")
+        print(f"I'm in {len(self.guilds)} server(s)")
 
         # Prints in the console that the bot is ready
         print(f'{self.user} is now online and ready!')
@@ -38,8 +41,15 @@ class SimpleBot(discord.Client):
     async def on_message(self, message: discord.Message):
         # Ignore messages from bots including self
         if message.author.bot:
-            pass
-        # Do whatever you want
+            return
+        # Do something
+
+    # To react to users joining a guild the bot is in
+    async def on_member_join(self, member: discord.Member):
+        # Check if the member is a bot
+        if member.bot:
+            return
+        # Do something
 
 
 # Function to run the bot
