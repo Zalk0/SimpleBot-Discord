@@ -1,4 +1,5 @@
 import discord
+from dotenv import dotenv_values
 
 from commands_list import commands_list
 
@@ -6,13 +7,13 @@ from commands_list import commands_list
 # Create a class of the bot
 class SimpleBot(discord.Client):
     # Initialization when class is called
-    def __init__(self, config):
+    def __init__(self):
         # Set intents for the bot
         intents = discord.Intents.all()
         super().__init__(intents=intents)
 
         # Associate the config to the bot
-        self.config = config
+        self.config = dotenv_values()
 
     # Wait until bot is ready
     async def on_ready(self):
