@@ -47,16 +47,3 @@ class SimpleBot(discord.Client):
         if member.bot:
             return
         # Do something
-
-
-# Function to run the bot
-def main():
-    # Import token from file
-    with open("bot_token", "r") as file:
-        token = file.read().rstrip()
-
-    # Create an instance of the SimpleBot
-    client = SimpleBot()
-
-    # Run the client with the token
-    client.run(token, reconnect=True)

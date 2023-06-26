@@ -1,4 +1,4 @@
-# Ignore the token of the bot (private)
-bot_token
+# Ignore the dotenv
+.env
 # Ignore Python's cache
 __pycache__

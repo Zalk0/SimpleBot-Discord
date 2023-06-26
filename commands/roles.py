@@ -28,9 +28,9 @@ class Roles(app_commands.Group):
         else:
             await interaction.response.send_message("You must be administrator to use this command!")
 
-    # Define same_roles command
-    @app_commands.command(name="same_roles", description="Displays the roles with the same name")
-    async def same(self, interaction: discord.Interaction):
+    # Define check_duplicate command
+    @app_commands.command(name="check_duplicate", description="Displays the roles with the same name")
+    async def check_dupli(self, interaction: discord.Interaction):
         # Defer response to slash command (default only allows the bot 3s to respond)
         await interaction.response.defer(thinking=True)
         roles = interaction.guild.roles
