@@ -26,8 +26,14 @@ class SimpleBot(discord.Client):
         await command_tree.sync()
 
         # Set activity of the bot
-        activity = discord.Activity(type=discord.ActivityType.listening, name="me")
-        await self.change_presence(activity=activity, status=discord.Status.online)
+        activity_type = {"playing": 0,
+                         "streaming": 1,
+                         "listening": 2,
+                         "watching": 3,
+                         "competing": 5}
+        activity = discord.Activity(type=activity_type.get(self.config['BOT_ACTIVITY_TYPE']),
+                                    name=self.config['BOT_ACTIVITY_NAME'])
+        await self.change_presence(activity=activity, status=self.config['BOT_STATUS'])
 
         # Set up logging
         discord.utils.setup_logging()
