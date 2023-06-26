@@ -6,10 +6,13 @@ from commands_list import commands_list
 # Create a class of the bot
 class SimpleBot(discord.Client):
     # Initialization when class is called
-    def __init__(self):
+    def __init__(self, config):
         # Set intents for the bot
         intents = discord.Intents.all()
         super().__init__(intents=intents)
+
+        # Associate the config to the bot
+        self.config = config
 
     # Wait until bot is ready
     async def on_ready(self):
@@ -46,4 +49,5 @@ class SimpleBot(discord.Client):
         # Check if the member is a bot
         if member.bot:
             return
-        # Do something
+        if int(self.config['GUILD_ID']) == member.guild.id:
+            await member.send(f"Welcome to the **{member.guild.name}** Discord server!")

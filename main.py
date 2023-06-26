@@ -6,10 +6,9 @@ from bot import SimpleBot
 def main():
     # Import config from dotenv
     config = dotenv_values()
-    print(config)
 
     # Create an instance of the SimpleBot
-    client = SimpleBot()
+    client = SimpleBot(config)
 
     # Run the client with the token
     client.run(config['BOT_TOKEN'], reconnect=True)
